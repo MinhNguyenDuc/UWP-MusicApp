@@ -1,0 +1,109 @@
+﻿<Page
+    x:Class="AssignmentUWP.Views.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AssignmentUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <ScrollViewer>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 20, 0, 50">
+            <Button x:ConnectionId='2' VerticalAlignment="Top" HorizontalAlignment="Left"                    >
+                <SymbolIcon Symbol="Back"></SymbolIcon>
+            </Button>
+            <TextBlock Margin="0,20,0,0" HorizontalAlignment="Center" Text="REGISTER" FontSize="28"></TextBlock>
+            <RelativePanel Margin="0,25,0,0">
+                <TextBox x:ConnectionId='17' Width="500" x:Name="FirstName"                 >
+                    <TextBox.Header>
+                        <TextBlock FontSize="24">First Name</TextBlock>
+                    </TextBox.Header>
+                </TextBox>
+                <TextBlock x:ConnectionId='18' FontSize="15" x:Name="FirstName_Message" RelativePanel.Below="FirstName" Foreground="Red"></TextBlock>
+            </RelativePanel>
+            <RelativePanel Margin="0,25,0,0">
+                <TextBox x:ConnectionId='15' Width="500" x:Name="LastName">
+                    <TextBox.Header>
+                        <TextBlock FontSize="24">Last Name</TextBlock>
+                    </TextBox.Header>
+                </TextBox>
+                <TextBlock x:ConnectionId='16' FontSize="15" x:Name="LastName_Message" RelativePanel.Below="LastName" Foreground="Red"></TextBlock>
+            </RelativePanel>
+            <RelativePanel Margin="0,25,0,0">
+                <TextBox x:ConnectionId='13' Width="500" x:Name="Email">
+                    <TextBox.Header>
+                        <TextBlock FontSize="24">Email</TextBlock>
+                    </TextBox.Header>
+                </TextBox>
+                <TextBlock x:ConnectionId='14' FontSize="15" x:Name="Email_Message" RelativePanel.Below="Email" Foreground="Red"></TextBlock>
+            </RelativePanel>
+            <RelativePanel Margin="0,25,0,0">
+                <PasswordBox x:ConnectionId='11' Width="500" x:Name="Passwrd">
+                    <PasswordBox.Header>
+                        <TextBlock FontSize="24">Password</TextBlock>
+                    </PasswordBox.Header>
+                </PasswordBox>
+                <TextBlock x:ConnectionId='12' FontSize="15" x:Name="Password_Message" RelativePanel.Below="Passwrd" Foreground="Red"></TextBlock>
+            </RelativePanel>
+            <RelativePanel Margin="0,25,0,0">
+                <TextBox x:ConnectionId='9' Width="500" x:Name="Address">
+                    <TextBox.Header>
+                        <TextBlock FontSize="24">Address</TextBlock>
+                    </TextBox.Header>
+                </TextBox>
+                <TextBlock x:ConnectionId='10' FontSize="15" x:Name="Address_Message" RelativePanel.Below="Address" Foreground="Red"></TextBlock>
+            </RelativePanel>
+            <RelativePanel Margin="0,25,0,0">
+                <TextBox x:ConnectionId='7' Width="500" x:Name="Phone">
+                    <TextBox.Header>
+                        <TextBlock FontSize="24">Phone</TextBlock>
+                    </TextBox.Header>
+                </TextBox>
+                <TextBlock x:ConnectionId='8' FontSize="15" x:Name="Phone_Message" RelativePanel.Below="Phone" Foreground="Red"></TextBlock>
+            </RelativePanel>
+            <RelativePanel Margin="0,25,0,0">
+                <TextBox x:ConnectionId='6' Width="500" x:Name="Avatar_Url">
+                    <TextBox.Header>
+                        <TextBlock FontSize="24">Avatar</TextBlock>
+                    </TextBox.Header>
+                </TextBox>
+                <TextBlock></TextBlock>
+            </RelativePanel>
+
+            <RelativePanel>
+                <TextBlock x:ConnectionId='5' x:Name="Gender" Text="Gender" FontSize="24" Margin="0, 30, 0, 0"/>
+                <StackPanel RelativePanel.Below="Gender" Orientation="Horizontal">
+                    <RadioButton Content="Male" Tag="1" />
+                    <RadioButton Content="Female" Tag="0" />
+                    <RadioButton Content="Other" Tag="2"/>
+                </StackPanel>
+            </RelativePanel>
+
+            <CalendarDatePicker x:ConnectionId='3' x:Name="BirthDay" Header="Birthday" Margin="0, 30, 0, 0"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:ConnectionId='4' Style="{StaticResource AccentButtonStyle}"
+                    FontWeight="Medium"
+                    Content="Sign Up"
+                    FontSize="24"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Width="131"
+                    FontFamily="Segoe UI"
+                    Margin="0,25,0,0"                      ></Button>
+                <Button Style="{StaticResource AccentButtonStyle}"
+                    FontWeight="Medium"
+                    Content="Reset"
+                    FontSize="24"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Width="131"
+                    FontFamily="Segoe UI"
+                    Margin="30,25,0,0"></Button>
+            </StackPanel>
+            
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

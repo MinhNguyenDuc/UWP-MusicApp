@@ -1,0 +1,87 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="AssignmentUWP.Views.Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AssignmentUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:entity="using:AssignmentUWP.Entity"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot x:ConnectionId='2' x:Name="rootPivot">
+            <PivotItem x:ConnectionId='4' Header="List Song" x:Name="ListSongPivot">
+                <Grid>
+                    <ListView x:ConnectionId='18'                                              x:Name="MenuList">
+                        <ListView.ItemTemplate>
+                            <DataTemplate                         >
+                                <StackPanel x:ConnectionId='19' Padding="12" Orientation="Horizontal" Tag="{Binding}"                                                                     >
+                                    <Ellipse Height="77" Width="77">
+                                        <Ellipse.Fill>
+                                            <ImageBrush x:ConnectionId='22'                                 />
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    <StackPanel Margin="24,12,0,0">
+                                        <TextBlock x:ConnectionId='20'                      VerticalAlignment="Center" 
+                                               Style="{ThemeResource BaseTextBlockStyle}" 
+                                               Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                                                Margin="0,0,0,0"/>
+                                        <TextBlock x:ConnectionId='21'                        VerticalAlignment="Center"                                                
+                                               Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" 
+                                               Margin="0,7,0,0"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+                </Grid>
+            </PivotItem>
+            <PivotItem x:ConnectionId='5' Header="My Song" x:Name="MySongPivot">
+                <Grid>
+                    <ListView x:ConnectionId='13'                                                x:Name="MySongList">
+                        <ListView.ItemTemplate>
+                            <DataTemplate                         >
+                                <StackPanel x:ConnectionId='14' Padding="12" Orientation="Horizontal" Tag="{Binding}"                                                                     >
+                                    <Ellipse Height="77" Width="77">
+                                        <Ellipse.Fill>
+                                            <ImageBrush x:ConnectionId='17'                                 />
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    <StackPanel Margin="24,12,0,0">
+                                        <TextBlock x:ConnectionId='15'                      VerticalAlignment="Center" 
+                                               Style="{ThemeResource BaseTextBlockStyle}" 
+                                               Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                                                Margin="0,0,0,0"/>
+                                        <TextBlock x:ConnectionId='16'                        VerticalAlignment="Center"                                                
+                                               Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" 
+                                               Margin="0,7,0,0"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </PivotItem>
+            <PivotItem x:ConnectionId='6' Header="Up Load" x:Name="UpLoadPivot">
+                <StackPanel>
+                    <TextBox x:ConnectionId='7' x:Name="SongName" Header="Song Name"/>
+                    <TextBox x:ConnectionId='8' x:Name="SongAuthor" Margin="0, 10,0,0" Header="Author"/>
+                    <TextBox x:ConnectionId='9' x:Name="SongSinger" Margin="0, 10,0,0" Header="Singer"/>
+                    <TextBox x:ConnectionId='10' x:Name="SongThumbnail" Margin="0, 10,0,0" Header="Thumbnail"/>
+                    <TextBox x:ConnectionId='11' x:Name="SongUrl" Margin="0, 10,0,0" Header="Link"/>
+                    <Button x:ConnectionId='12' HorizontalAlignment="Center" Content="Upload Song" Margin="0, 10, 0, 0"                   />
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+        <MediaElement x:ConnectionId='3' x:Name="SongPlayer"
+                        MaxWidth="400"
+                        AutoPlay="True"
+                        AreTransportControlsEnabled="True" />
+    </Grid>
+    
+    
+    
+</Page>
+
